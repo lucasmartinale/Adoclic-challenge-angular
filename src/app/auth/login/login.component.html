@@ -1,1 +1,35 @@
-<p>login works!</p>
+<div class="container">
+    <div class="mt-3 text-center">
+        Login form
+    </div>
+    <div class="text-center">
+        Angular demo
+    </div>
+
+    <hr>
+    <div class="d-flex justify-content-center">
+        <div class="card p-3" >
+            <div class="d-flex justify-content-center mb-3">
+                <img class="rounded-circle" alt="avatar1" width="150" height="150" src="assets/linux.png" />
+            </div>
+    
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="inputPassword5" class="form-label">Password</label>
+                <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+            </div>
+            <div class="d-flex justify-content-center mb-3">
+                <button type="button" class="btn btn-success" [routerLink]="['/shopping']">Login</button>
+            </div>
+            <div class="mb-3">
+                <p class="text-center">
+                    <b>user:</b> user@demo.com <b>pass:</b> 123456
+                </p>
+            </div>
+        </div>
+    </div>
+    
+</div>
