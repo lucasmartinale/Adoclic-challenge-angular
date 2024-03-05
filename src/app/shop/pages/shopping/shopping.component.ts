@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'app/auth.service';
 import { FakeService } from 'app/fake.service';
 import { Product } from 'app/shop/interfaces/Product.interface';
 
@@ -24,7 +26,9 @@ export class ShoppingComponent implements OnInit {
   public productSelected: Product = null;
 
   constructor(
-    private fakeService: FakeService
+    private fakeService: FakeService,
+    private authService: AuthService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -64,6 +68,11 @@ export class ShoppingComponent implements OnInit {
         this.categories = [];
       },
     });
+  }
+
+  logout(): void {
+    this.authService.logout();
+    this.router.navigate(['/login']);
   }
 }
 
