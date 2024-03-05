@@ -3,20 +3,19 @@ import { CommonModule } from '@angular/common';
 import { ShoppingComponent } from './pages/shopping/shopping.component';
 import { RouterModule } from '@angular/router';
 import { ShopRoutingModule } from './shop-routing.module';
-import { SharedModule } from '../shared/shared.module';
-import { NgbdModalComponent } from '../shared/components/modal/modal.component';
-
+import { FormsModule } from '@angular/forms';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
   declarations: [
-    ShoppingComponent
+    ShoppingComponent,
+    SpinnerComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     ShopRoutingModule,
-    SharedModule,
-    NgbdModalComponent,
+    FormsModule    
   ]
 })
 export class ShopModule { }
