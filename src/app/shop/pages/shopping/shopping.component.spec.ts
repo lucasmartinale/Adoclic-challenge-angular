@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ShoppingComponent } from './shopping.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { SpinnerComponent } from 'app/shop/components/spinner/spinner.component';
+import { FormsModule } from '@angular/forms';
 
 describe('ShoppingComponent', () => {
   let component: ShoppingComponent;
@@ -8,7 +11,11 @@ describe('ShoppingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ShoppingComponent ]
+      declarations: [ ShoppingComponent, SpinnerComponent ],
+      imports: [
+        HttpClientTestingModule,
+        FormsModule
+      ]
     })
     .compileComponents();
 
