@@ -41,7 +41,6 @@ export class ShoppingComponent implements OnInit {
     this.fakeService.getProducts(filters).subscribe({
       next: (response) => {
         this.products = response;
-        console.log(this.products);
         this.loadingProducts = false;
       },
       error: (error) => {
